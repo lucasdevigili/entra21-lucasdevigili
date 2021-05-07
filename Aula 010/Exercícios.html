@@ -179,14 +179,12 @@ if (golsTimeUm < golsTimeDois) {
 
 let idade = prompt("Digite sua idade")
 
-if (idade <= 15) {
-            alert("Não precisa votar")
-        } else if (idade >= 16 && idade <= 17) {
+if (idade >= 18 && idade <= 65) {
+            alert("Voto obrigatório")
+        } else if (idade >= 16 && idade <= 17 || idade > 70) {
             alert("Voto Opcional")
         } else {
-           alert("Voto obrigatório")
-        }
-
+        
 17) Faça um script que leia três números e mostre-os em ordem decrescente.
                                              
 //
