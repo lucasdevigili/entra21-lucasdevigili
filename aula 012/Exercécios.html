@@ -1,0 +1,80 @@
+1) Faça três scripts que mostrem a mensagem "Olá mundo!" 10 vezes na tela. Utilize uma estrutura
+de repetição diferente em cada um dos scripts (while, do-while, for).
+
+let i = 0
+while (i < 10) { 
+console.log ("olá mundo") 
+i++     
+}
+
+let i = 0
+do {
+    console.log("olá mundo")
+    i++
+} while (i < 10)
+
+for (let i = 0; i < 10; i++) {
+    console.log("olá mundo")
+}
+
+2) Elabore três scripts que mostrem a mensagem "Estou aparecendo pela <numero_de_vezes> na tela!" 10 vezes. Substitua
+    <numero_de_vezes> pela iteração atual do loop. Utilize uma estrutura de repetição diferente em cada um dos scripts
+    (while, do-while, for).
+
+    let i = 1
+    while (i < 11) { 
+    alert ("Estou aparecendo na tela " + i + " vezes") 
+    i++
+    }
+
+    let i = 1
+do {
+    alert("Estou aparecendo na seua tela " + i + " vezes")
+    i++
+} while (i < 11)
+
+for (let i = 1; i < 11; i++) {
+    alert("Estou aparecendo na sua tela " + i + " vezes")
+}
+
+
+3) Faça um algoritmo que mostra uma contagem regressiva na tela, iniciando em 10 e terminando em 0. Mostrar uma mensagem “FIM!” apos a contagem.
+
+//
+
+4) Faça um script utilizando o for, que permita ao usuário fazer três contas de subtração. 
+Para isso peça ao usuário dois números a cada iteração do loop e mostre na tela o resultado
+da operação.
+let subtração = 2
+            
+while (true) {
+    let valor = Number(prompt("Digite um número"))
+    
+    if (!valor) {
+        break
+    }
+
+    subtração -= valor
+}
+alert(`Subtração: ${subtração}`)
+
+5) Escreva um programa que declare uma váriavel numero, inicialize-a com 0, e incremente-a de 1000
+em 1000, mostrando seu valor na tela, ate que seu valor seja 100000 (cem mil).
+
+//
+
+6) Faça um programa que peça ao usuario para digitar 5 valores. Ao final, mostre a soma desses
+valores e média desses valores (arredondado para duas casas decimais).
+let adicao = 0
+let media = 60
+while (true) {
+let valor = Number(prompt("Digite um número"))
+
+if (!valor) {
+break
+}
+
+adicao += valor
+media /= valor
+}
+alert(`Adição: ${adicao} \n Média ${media}` )
