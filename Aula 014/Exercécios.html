@@ -1,0 +1,102 @@
+1) Leia um vetor de 10 posicões. Calcule e escreva quantos valores pares ele possui.
+
+let vetor = []
+pares = 0 
+for (let i = 0; i < 10; i ++) {
+vetor[i] = +prompt(`Digite o ${i + 1}º valor`)
+
+if (vetor[i] % 2 === 0) pares++ 
+
+}
+
+console.log(`A qunantidade de números pares digitados foi: ${pares}`)
+
+
+2) Escreva um programa que leia 5 numeros e os armazene em um vetor. Mostre o vetor, o 
+maior elemento e a posição que ele se encontra.
+
+let numeros = [],
+maior,
+posicao = 0
+
+for (let i = 0; i < 5; i++) {
+ numeros[i] = +prompt("Digite um número")
+
+if (i === 0) {
+    maior = numeros[i]
+} else if (numeros[i] > maior) {
+    maior = numeros[i]
+    posicao = i
+}        
+}
+
+console.log(`Posição: ${posicao}\nMaior: ${maior}`)
+
+
+3) Faça um programa que receba do usuario um vetor com 5 posições. Em seguida, mostre
+o maior e o menor elemento do vetor.
+
+let numeros = [],
+maior,
+menor
+
+for (let i = 0; i < 5; i++) {
+ numeros[i] = +prompt("Digite um número")
+
+if (i === 0) {
+ maior = numeros[i]
+ menor = numeros[i]
+} else if (numeros[i] > maior) {
+ maior = numeros[i]
+} else if (numeros[i] < menor) {
+ menor = numeros[i]
+}
+
+console.log(`Menor: ${menor}\nMaior: ${maior}`)
+}
+
+4) Ler um vetor de 5 elementos. Crie um segundo vetor, com todos os elementos na ordem 
+inversa, ou seja, o último elemento passará a ser o primeiro, o penúltimo será o segundo 
+e assim por diante. Mostre os dois vetores. 
+
+let numeros = []
+let numerosInversos = 0
+
+for (let i = 0; i < 5; i++) {
+    numeros[i] = +prompt("Digite um número")
+}
+
+for (let i = 0, tamanhoVetor = numeros.length; i < tamanhoVetor; i++) {
+    console.log(numeros[i])
+}
+
+for (let i = numeros.length - 1; i >= 0; i--) {
+    console.log(numeros[i])
+}
+
+
+5) Ler um vetor com 5 nomes de pessoas, após pedir que o usuário digite um nome qualquer 
+de pessoa. Escrever a mensagem “ACHEI”, se o nome estiver armazenado no vetor de nomes ou 
+“NÃO ACHEI” caso contrário.  
+
+let nomes = []    
+
+for (let i = 0; i < 5; i++) {
+    nomes[i] = prompt(`Digite o ${i + 1}º nome`)
+}
+ 
+let nomeProcurado = prompt("Digite o nome que você quer encontrar")
+
+let flag
+for (let i = 0; i < 5; i++) {
+    if(nomeProcurado === nomes[i]) {
+        flag = true
+        break  
+    }
+}
+
+if (flag) {
+    console.log("Achei")
+} else {
+    console.log("Nâo achei")
+}
