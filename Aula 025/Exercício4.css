@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(194, 194, 194);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+hr
+ {
+    border: 2px solid black;
+}
+
+h1 {
+    color: blue;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+    margin-left: 35%;  
+}
+
+blockquote {
+    text-align: center;
+    font-size: 20px;
+}
+
+.Autor {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}

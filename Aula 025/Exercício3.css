@@ -1,0 +1,19 @@
+p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.Texto1 {
+    color: green;
+    margin: 0%;
+}
+
+.Texto2Vermelho {
+    color:red;
+    margin: 0%;
+    font-size: 23px;
+}
+
+.Texto2Azul {
+    color:blue;
+}
