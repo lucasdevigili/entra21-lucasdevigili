@@ -11,7 +11,11 @@ body {
 .main-header {
     text-align: center;
     padding: 100px 50px 30px;
-    color: white;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.titulo {
+    color: white ;
 }
 
 .main-header h1 {
@@ -24,9 +28,15 @@ body {
 }
 
 .main-header a {
-    color: white;
+    color: rgba(255, 255, 255, 0.65);
     text-decoration: none;
     border-bottom: 1px dotted;
+}
+
+.main-header a:hover {
+    border-bottom: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
 }
 
 .nav {
@@ -73,5 +83,80 @@ nav a:hover {
     display: table;
   }
 
+.imagem span {
+      padding: 10px;
+      border-radius: 50%;
+      display: inline-block;
+      border: 1px solid #ccc;
+  }
 
-  
+.imagem img {
+    border-radius: 100%;
+}
+
+.tituloTopico1 {
+    font-weight: 300;
+    color: #636363;
+    font-size: 32px;
+}
+
+.tituloTopicos {
+    font-weight: 300;
+    color: #636363;
+    font-size: 32px;
+    text-align: center;
+}
+
+.div{
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+  }
+
+.sessao4 {
+    color: white;
+}
+
+.botao {
+    padding: 20px 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #636363    
+}
+
+.botao:hover {
+    background-color: rgba(133, 133, 133, 0.13);
+}
+
+.botao--azul {
+    padding: 24px 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #8cc9f0;
+    border: 1px solid #8cc9f0;
+    color: white;
+}
+
+.botao--azul:hover {
+    background-color: rgba(140, 202, 240, 0.900);
+    border-color: rgba(140, 202, 240, 0.900);
+}
+
+.botoes {
+    text-align: center;
+}
+
+.botoes li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.px16 {
+    font-size: 18.6667px;
+    color: #636363;
+    text-align: center;
+}
+
+.textolado {
+    text-align: left;
+}
