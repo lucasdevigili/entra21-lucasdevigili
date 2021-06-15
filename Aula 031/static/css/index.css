@@ -1,3 +1,196 @@
-.a {
-    background-image: url(https://html5up.net/uploads/demos/strata/images/bg.jpg);
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#header {
+    background-image: url(../img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-size: cover;
+    text-align: center;
+    padding: 72px 24px;
+}
+
+#header strong {
+    color: white;
+}
+
+#header a {
+    border-bottom: 1px dotted
+}
+
+#header a:hover {
+    color: #49bf9d; 
+    text-decoration: none; 
+  }
+
+h1 {
+    margin-bottom: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.avatar img {
+    border-radius: 100%;
+}
+
+.header {
+    color:rgb(165, 165, 165);
+    font-size: 21px;
+    font-weight: normal;
+}
+
+#conteudo img {
+    border-radius: 10px;
+    width: 312px;
+    height: 182px;
+}
+
+h2 {
+    color: rgb(78,78,78);
+    font-size: 21px;
+    text-align: left;
+    margin-bottom:21px;
+}
+
+p {
+    color: #a2a2a2;
+    margin-bottom: 32px;
+}
+
+h3 {
+    color: rgb(78,78,78);
+    font-size: 16px;
+    text-align: left;
+
+}
+
+#conteudo {
+    padding: 36px 24px 4px;
+}
+
+#conteudo a {
+    display: block;
+    padding-left: 94px;
+    padding-right: 94px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+   text-decoration: none;
+   border: 1px solid black;
+   color: #a2a2a2;
+   border-color: #a2a2a2;
+   border-radius: 5px;
+   margin-top: 30px;
+}
+
+#informacoes {
+    padding-left: 24px;
+}
+
+#informacoes input{
+    width:247px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    color: rgb(162, 162, 162);
+    background-color:  #f7f7f7;
+    border: 0px;
+    margin-bottom: 20px;
+    border: 2px solid transparent;
+}
+
+#informacoes input:focus {
+    border: 2px solid;
+    border-color: #49bf9d;
+    outline: 0; 
+}
+
+#informacoes textarea{
+    padding-top: 12px;
+    padding-left: 12px;
+    color: rgb(162, 162, 162);
+    background-color:  #f7f7f7;
+    border: 0px;
+    border: 2px solid transparent;
+}
+
+#informacoes textarea:focus {
+    border: 2px solid;
+    border-color: #49bf9d;
+    outline: 0; 
+}
+
+#conteudo a:hover {
+    color: #49bf9d; 
+    border-color: #49bf9d; 
+}
+
+#endereco {
+    margin-bottom: 24px;
+}
+
+#endereco li{
+    color:  #a2a2a2;
+    margin-top: 24px;
+}
+
+footer {
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 36px 24px;
+    height: 145px;
+
+}
+
+#redes {
+    text-align: center;
+}
+
+#redes ul {
+    padding-left: 0;
+}
+
+
+#redes li {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    margin-right: 35px;
+    width: 20px;  
+    height: 20px;
+}
+
+#redes i {
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.527);
+}
+
+#redes i:hover {
+    color: #49bf9d;
+}
+
+#autoria {
+    color: rgba(255, 255, 255, 0.527);
+    text-align: center;
+    text-decoration: none;
+}
+
+#autoria a{
+    color: rgba(255, 255, 255, 0.527);
+    border-bottom: 1px dotted;
+    text-decoration: none;   
+}
+
+#autoria a:hover{
+    color: #49bf9d;
+    text-decoration: none;
+    border-bottom: none
+    
+}
+
+#autoria li {
+    padding-bottom: 10px;
+    list-style: none;
 }
