@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+
+body {
+     background-image: url(../img/Background\ body.jpg);
+}
+
+header {
+    background-image: url(../img/Background\ header.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+.avatar img {
+    margin-top: 15px;
+    border-radius: 100%;
+    height: 90px;
+}
+
+ul {
+    padding-left: 0;
+}
+
+h1 {
+    margin: 0%;
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+}
+
+header h1 {
+    color: white;
+    padding-bottom: 15px;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    text-align: center;
+    background-color:rgba(213, 215, 71, 0.47);
+}
+
+nav li {
+    display: inline-block; 
+    padding-right: 5px;
+    margin-top: 15px;
+}
+
+.borda {
+    border-right: 2px solid black;
+    padding-right: 20px;
+}
+
+
+
+nav a {
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    border: 1px transparent;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+nav a:hover {
+    background-color: rgba(213, 215, 71, 0.47);
+}
+
+nav ul {
+    margin: 0;
+    padding-bottom: 15px;
+}
+
+.fotos {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.fotos img {
+    border-radius: 20%;
+    height: 259px;
+    width: 195px;
+}
+
+.fotos h2 {
+    margin-bottom: 90px;
+}
+
+footer {
+    background-image: url(../img/Background\ header.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding-bottom: 24px;
+    color: white;
+}
+
+#redes {
+    text-align: center;
+}
+
+#redes ul {
+    padding-left: 0;
+}
+
+#redes li {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    margin-right: 35px;
+    width: 20px;  
+    height: 20px;
+    padding-top: 30px;
+}
+
+#redes i {
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.527);
+}
+
+#redes i:hover {
+    color: rgb(0, 183, 255)
+}
+
+@media screen and (min-width: 600px) {  
+    .avatar img {
+        margin-top: 15px;
+        border-radius: 100%;
+        height: 120px;
+    }
+    
+    h1 {
+        margin: 0%;
+        font-family: 'Dancing Script', cursive;
+        font-size: 60px;
+    }
+    
+    nav a {
+        font-size: 17px;
+        text-decoration: none;
+        color: black;
+        border: 1px transparent;
+        border-radius: 10px;
+        padding: 3px;
+    }
+    
+    nav li {
+        padding-left: 50px;
+    }
+
+    .fotos {
+        margin-top: 40px;
+        text-align: center;
+    }
+    
+    .fotos img {
+        border-radius: 20%;
+        height: 359px;
+        width: 295px;
+    }
+
+    #redes i {
+        font-size: 40px;
+        color: rgba(255, 255, 255, 0.527);
+    }
+
+    #redes li {
+        color: rgb(255, 255, 255);
+        display: inline-block;
+        margin-right: 70px;
+        width: 20px;  
+        height: 20px;
+        padding-top: 30px;
+    }
+}
