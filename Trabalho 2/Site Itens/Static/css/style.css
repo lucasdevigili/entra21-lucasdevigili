@@ -10,14 +10,11 @@
 
 
 body {
-     background-image: url(../img/Background\ body.jpg);
+    background-image: url(../img/Fundo\ Itens.jpg);   
 }
 
 header {
     transition: all 1s; 
-    background-image: url(../img/Background\ header.jpg);
-    background-position: center;
-    background-size: cover;
     text-align: center;  
 }
 
@@ -45,6 +42,14 @@ h1 {
     padding-bottom: 15px;
 }
 
+#itens {
+    background-image: url(../img/Background\ body.jpg);
+}
+
+#itens:hover {
+    display: block;
+}
+
 header h2 {
     animation-name: aparecer;   
     animation-duration: 2s;
@@ -68,6 +73,11 @@ header a:hover {
 }
 
 #itens {
+    border-radius: 15px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    margin-left: 60px;
+    margin-right: 60px;
     text-align: center;
 }
 
@@ -80,7 +90,6 @@ header a:hover {
 }
 
 footer {
-    background-image: url(../img/Background\ header.jpg);
     background-position: center;
     background-size: cover;
     text-align: center;
@@ -150,10 +159,6 @@ footer {
     
     h1 {
         font-size: 60px;
-    }
-    
-    nav a {
-        font-size: 17px;
     }
     
     #redes i {

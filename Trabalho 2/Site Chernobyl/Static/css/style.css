@@ -111,31 +111,36 @@ nav ul {
     padding-bottom: 15px;
 }
 
-.fotos {
-    margin-top: 40px;
-    text-align: center;
+body, html {
+    height: 100%;
+  }
+
+#fotos {
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+.foto1 {
+    background-image: url("../img/cherobyl1.htm");
+
 }
 
-.fotos img:hover {
-    -moz-transform: scale(1.05);
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-    transition: all 0.5s;
-    -webkit-filter: brightness(50%);
-    filter:  brightness(50%);
-
+.foto2 {
+    background-image: url("../img/38307777612_4bfd9311ec_b.jpg");
 }
 
-.fotos img {
-    border: 2px solid transparent;
-    transition: 1s;
-    border-radius: 20%;
-    height: 259px;
-    width: 195px;
+.foto3 {
+    background-image: url("../img/desfile-militar-coreia-norte-15012021084017532.jpeg");
 }
 
-.fotos h2 {
-    margin-bottom: 90px;
+#conteudo {
+    font-size: larger;
+    text-align: justify;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 footer {
@@ -152,7 +157,7 @@ footer {
 }
 
 #redes ul {
-    padding-left: 0;
+    padding: 0;
 }
 
 #redes li {
@@ -189,9 +194,9 @@ footer {
     transition: all 0.5s;
     background: #f09433; 
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #redes .email i:hover {
@@ -214,11 +219,8 @@ footer {
     nav a {
         font-size: 17px;
     }
-    
-    .fotos img {
-        height: 359px;
-        width: 295px;
-    }
+
+        
 
     #redes i {
         font-size: 40px;
@@ -312,62 +314,36 @@ footer {
         margin-right: 10px;
     }
 
-    .fotos .fotos-viagens {
-        border-radius: 20%;
-        height: 259px;
-        width: 195px;
-
-    }
-    
-    .fotos h2 {
-        margin-bottom: 90px;
-        font-size: 30px;
-    }
-
-    .fotos-viagens {
+    #geral {
         display: grid;
         grid-template-areas: 
-        "foto1 foto2"
-        "texto1 texto2";
+        "foto1 texto1 texto1" 
+        "texto2 texto2 foto2"
+        "foto3 texto3 texto3";
     }
 
-    .fotos-viagens .brasilia {
+    #fotos .foto1 {
         grid-area: foto1;
     }
 
-    .fotos-viagens .foz-do-iguaçul {
+    #fotos .foto2 {
         grid-area: foto2;
     }
 
-    .fotos-viagens .brasilia-texto {
-        grid-area: texto1;
-    }
-
-    .fotos-lugares {
-        display: grid;
-        grid-template-areas: 
-        "foto1 foto2 foto3" 
-        "texto1 texto2 texto3";
-    }
-
-    .fotos-lugares .pyongyang {
-        grid-area: foto1;
-    }
-
-    .fotos-lugares .chernobyl {
-        grid-area: foto2;
-    }
-
-    .fotos-lugares .los-angeles {
+    #fotos .foto3 {
         grid-area: foto3;
     }
 
-    .fotos-lugares .pyongyang-texto {
+    #conteudo .texto1 {
         grid-area: texto1;
     }
 
-    .fotos-lugares .chernobyl-texto {
+    #conteudo .texto2 {
         grid-area: texto2;
+    }
+
+    #conteudo .texto3 {
+        grid-area: texto3;
     }
 
     #redes i {
