@@ -1,0 +1,243 @@
+1) Crie uma <div> que se torne em uma <textarea> quando clicada.
+    A <textarea> permite editar o HTML da <div>
+    Quando o usuário pressionar Enter ou sair da <textarea>, ela
+    volta a ser uma <div> com o conteúdo alterado na <textarea>
+<!--
+</head>
+<style>
+    div {
+        height: 39px;
+    }
+</style>
+<body>
+<form>
+    <p>Clique na DIV</p>
+    <div id="selecionavel">
+        <textarea id="text" hidden>Clique na DIV</textarea>        
+    </div>
+</form>  
+
+
+<p></p>
+<script>
+    let div = document.querySelector("#selecionavel")
+    div.tabIndex = 0
+    div.focus()
+
+    div.addEventListener("click", () => {                       
+        let texto = document.querySelector("#text")            
+
+        texto.hidden = false
+    })
+
+    let = document.querySelector("textarea"),
+        p = document.querySelector("p")
+
+    let texto = document.querySelector("#text") 
+    texto.addEventListener("blur", () => {
+        texto.hidden = true
+                   
+        p.textContent = texto.value
+    })
+
+    div.addEventListener("keydown", (event) => {  
+        if (event.key == "Enter")  {                  
+            texto.blur()            
+        } 
+    })
+</script>
+</body> 
+-->
+
+2) Crie uma div que tenha o seguinte conteúdo:
+         _   _
+        (q\_/p)
+         /. .\
+        =\_t_/=   __
+         /   \   (
+        ((   ))   )
+        /\) (/\  /
+        \  Y  /-'
+         nn^nn
+
+Quando você clicar na div torne ela selecionável e faça ela se mover de acordo com o
+as setas do teclado.
+
+<!--
+        <style>
+        .rato {
+            display: inline-block;
+            position: fixed;
+            margin: 0;
+        }
+
+        .rato:focus {
+            outline: 1px solid transparent;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>    
+        <pre class="rato">
+_   _
+(q\_/p)
+ /. .\
+=\_t_/=   __
+ /   \   (
+((   ))   )
+/\) (/\  /
+\  Y  /-'
+ nn^nn
+        </pre>    
+    <script> 
+        let rato = document.querySelector(".rato")
+
+        rato.addEventListener("click", () => {
+            rato.tabIndex = 0
+            rato.focus()
+
+            rato.style.top = rato.getBoundingClientRect().top + "px"            
+            rato.style.left = rato.getBoundingClientRect().left + "px"
+        })
+        
+        rato.addEventListener("keydown", (e) => {
+            switch (e.key) {
+                case "ArrowRight":            
+                    rato.style.left = parseInt(rato.style.left) + rato.clientWidth + "px"
+                    break
+                case "ArrowDown":
+                    rato.style.top = parseInt(rato.style.top) + rato.clientHeight + "px"
+                    break
+                case "ArrowLeft":
+                    rato.style.left = parseInt(rato.style.left) - rato.clientWidth + "px"
+                    break
+                case "ArrowUp":
+                    rato.style.top = parseInt(rato.style.top) - rato.clientHeight + "px"
+                    break
+            }
+        })
+                             
+    </script>
+</body>
+-->
+
+Crie um página da web que permita receber um valor inicial
+de depósito, a quantidade de meses que esse dinheiro ficará
+depositado e a porcentagem de juros ao ano.
+Mostre quanto o dinheiro rendeu nesse período.
+
+Fórmula:
+resultado = Math.round(inicial * (1 + juros * anos))
+
+Onde:
+    inicial - valor inicial.
+    juros - porcentagem de juros. Ex.: 10%.
+    anos - tempo que o valor ficará depositado.
+
+<!--
+    <body>
+    <form>
+        <label for="nome">
+            Valor inicial:
+            <input type="number" name="nome" id="inicial">
+        </label><form>
+        <label for="nome">
+             Juros:
+            <input type="number" name="nome" id="juros">
+        </label><form>
+        <label for="nome">
+            Anos:
+            <input type="number" name="nome" id="anos">
+        </label>
+    </form>
+
+    <p></p>
+
+    <button id="botao">Calcular</button>
+
+ <script>
+    let valorDigitado = document.querySelector("#inicial"),
+        jurosDigitado = document.querySelector("#juros"),
+        anosDigitado = document.querySelector("#anos")
+
+    function calcuarFuncao () {
+        let inicial = valorDigitado.value,
+            juros = jurosDigitado.value,
+            anos = anosDigitado.value
+            let conta = (Math.round(inicial * (1 + juros * anos)))
+            console.log(conta)
+            console.log(`valor inicial= ${valorDigitado.value} \n Juros= ${jurosDigitado.value} \n Anos= ${anosDigitado.value}`)
+            return conta
+    }
+
+    valorDigitado.addEventListener("input", calcuarFuncao)
+    jurosDigitado.addEventListener("input", calcuarFuncao)
+    anosDigitado.addEventListener("input", calcuarFuncao)
+
+    let button = document.getElementById("botao"),
+        p = document.querySelector ("p")
+
+        button.addEventListener("click", (event) => {
+            let conta = calcuarFuncao()
+            p.innerHTML = conta
+        })    
+
+ </script>
+</body>
+
+ou
+
+<body>
+    <form>
+        <label for="nome">
+            Valor inicial:
+            <input type="number" name="nome" id="inicial">
+        </label><form>
+        <label for="nome">
+             Juros:
+            <input type="number" name="nome" id="juros">
+        </label><form>
+        <label for="nome">
+            Anos:
+            <input type="number" name="nome" id="anos">
+        </label>
+    </form>
+
+    <p></p>
+
+ <script>
+    let valorDigitado = document.querySelector("#inicial"),
+        jurosDigitado = document.querySelector("#juros"),
+        anosDigitado = document.querySelector("#anos")
+
+    function calcuarFuncao () {
+        let inicial = valorDigitado.value,
+            juros = jurosDigitado.value,
+            anos = anosDigitado.value
+            let conta = (Math.round(inicial * (1 + (juros/100) * anos)))
+            console.log(conta)
+            console.log(`valor inicial= ${valorDigitado.value} \n Juros= ${jurosDigitado.value} \n Anos= ${anosDigitado.value}`)
+            return conta
+    }
+
+    function mostrarValor() {
+        let conta = calcuarFuncao()
+        p.innerHTML = conta
+    }
+
+    valorDigitado.addEventListener("input", mostrarValor)
+    jurosDigitado.addEventListener("input", mostrarValor)
+    anosDigitado.addEventListener("input", mostrarValor)
+
+    let button = document.getElementById("botao"),
+        p = document.querySelector ("p")
+
+        button.addEventListener("click", (event) => {
+            let conta = calcuarFuncao()
+            p.innerHTML = conta
+        })    
+
+ </script>
+</body>
+-->
+

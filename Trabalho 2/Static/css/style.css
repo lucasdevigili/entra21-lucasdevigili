@@ -53,6 +53,7 @@ nav {
     top: 0;
     text-align: center;
     background-color:rgba(213, 215, 71, 0.47);
+    z-index: 1;
 }
 
 nav li {
@@ -76,7 +77,7 @@ nav a {
     color: black;
     border: 1px transparent;
     border-radius: 10px;
-    padding: 3px;
+    padding: 10px;
 }
 
 nav a::before {
@@ -97,30 +98,17 @@ nav ul {
     text-align: center;
 }
 
+
 .fotos img:hover {
-    border: 2px solid black;
-}
-
-.overlay{
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.287);
-}
-
-.fotos a {
-    position: relative;
-    display: inline-block;
-    width: min-content;
-}
-
-.fotos:hover .overlay {
-    display: block;
+    transform: scale(1.05);
+    transition: all 0.5;
+    -webkit-filter: brightness(50%);
+    filter: brightness(50%);
 }
 
 .fotos img {
     border: 2px solid transparent;
+    transition: 1s;
     border-radius: 20%;
     height: 259px;
     width: 195px;
@@ -161,8 +149,20 @@ footer {
     color: rgba(255, 255, 255, 0.527);
 }
 
-#redes i:hover {
-    color: rgb(0, 183, 255)
+#redes .twitter i:hover {
+    color: #1DA1F2
+}
+
+#redes .faceboock i:hover {
+    color: #4064AC
+}
+
+#redes .instagram i:hover {
+    color: red; 	background: -webkit-linear-gradient(45deg, #f7ce02, #f96302, #f71102, #d32155, #b43890, #904eca, #8944bb, #7832ae); 	-webkit-background-clip: text; 	-webkit-text-fill-color: transparent;
+}
+
+#redes .email i:hover {
+    color: #0071CE
 }
 
 @media screen and (min-width: 600px) {  
@@ -337,8 +337,4 @@ footer {
         margin-right: 100px;
         padding-top: 30px;
     }
-}
-
-@media screen and (min-width: 1800px) {
-
 }
