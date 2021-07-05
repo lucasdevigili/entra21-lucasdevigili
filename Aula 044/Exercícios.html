@@ -1,0 +1,69 @@
+1) Escreva a classe Aluno. Cada objeto dessa classe deve guardar os seguintes dados:
+- matrícula,
+- nome
+- 2 notas de prova
+- 1 nota de trabalho
+
+Essa classe deve ter 2 métodos:
+- media: calcula a média final do aluno (cada prova tem peso 3 e o trabalho tem peso 2)
+- final: calcula quanto o aluno precisa para a prova final (retorna zero se ele não for para a final)
+
+<!-- <script>
+    class Aluno {
+        constructor(matricula, nome, notas, notaTrabalho) {
+
+            this.matricula = matricula
+
+            this.nome = nome
+
+            this.notas = notas
+
+            this.notaTrabalho = notaTrabalho
+
+        }
+
+
+        media() {
+            return (this.notas[0] * 3 + this.notas[1] * 3 + notaTrabalho * 2) / 8
+        }
+
+
+        final() {
+            if (this.media() > 6) {
+                return "Tá passado amigo"
+            } else {
+                return `Reprovou burro`
+            }
+            
+        }
+
+    }
+
+
+    function notaProva(){
+        let notas = []
+        for(let i = 0; i < 2; i++) {
+            notas[i] = +prompt(`Digite a nota da prova ${i + 1}º`)
+        }
+
+        return notas
+    }
+
+    let matricula = +prompt("Digite a matrícula do aluno")
+    let nome = prompt("Digite o nome do aluno")
+    let notas = notaProva()
+    let notaTrabalho = + prompt("Digite a nota do trabalho")
+    
+    let aluno = new Aluno(matricula, nome, notas, notaTrabalho)
+    console.log(aluno.final())
+    console.log(aluno.media())
+    console.log(`Matrícula = ${this.matricula} \t Aluno = ${this.nome} \t Media = ${this.media()} \t ${this.final}`)
+</script> -->
+
+2) Crie uma classe Agenda que pode armazenar 10 pessoas e que seja capaz de realizar as 
+seguintes operações:
+- armazenaPessoa(nome, telefone)
+- removePessoa(nome)
+- buscaPessoa(nome) -> Informa o número de telefone da pessoa
+- imprimeAgenda() -> Imprime os dados de todas as pessoas da agenda
+- imprimePessoa(indice) -> Imprime os dados da pessoa que está na posição "i" da agenda

@@ -1,0 +1,82 @@
+1) Crie um objeto Date para a data: Feb 20, 2012, 3:12am
+
+<!-- 
+<script>
+        let data = new Date(2012, 1, 20, 3, 12, 0)
+        alert(data)
+</script> 
+-->
+
+2) Crie uma função obtemDiaSemana(data) para mostrar o dia da semana
+no formato: 
+
+<!-- 
+<script>   
+        let diaDaSemana = new Date()        
+        
+        function mostrarDia(diaDaSemana){            
+        
+        let dia            
+        
+         switch (diaDaSemana.getDay()) {
+        
+                case 0:
+        
+             dia = "Domingo"
+        
+                 break
+        
+                 case 1: 
+        
+             dia = "Segunda-feira"
+        
+                 break
+        
+                 case 2: 
+        
+             dia = "Terça=Feira"
+        
+                 break
+        
+                 case 3: 
+        
+             dia = "Quarta-Feira"
+        
+                 break
+        
+                 case 4: 
+        
+             dia = "Quinta-Feira"
+        
+                 break
+        
+                 case 5: 
+        
+             dia = "Sexta-Feira"
+        
+                 break
+        
+                 case 6: 
+        
+             dia = "Sabado"
+        
+                 break
+        
+                }
+        
+             return dia
+        }
+        
+        alert(`Dia da semana: ${mostrarDia(diaDaSemana)}`)
+</script>
+-->
+
+3) Crie uma função obtemUltimoDiaMes(ano, mes) que retorna o último dia do mês.
+
+       Parâmetros: 
+       ano -> 2012
+       mes -> de 0 a 11
+
+
+
+       
