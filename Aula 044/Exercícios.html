@@ -67,3 +67,61 @@ seguintes operações:
 - buscaPessoa(nome) -> Informa o número de telefone da pessoa
 - imprimeAgenda() -> Imprime os dados de todas as pessoas da agenda
 - imprimePessoa(indice) -> Imprime os dados da pessoa que está na posição "i" da agenda
+
+<!-- <Script>
+    class Pessoa {
+      constructor(nome, telefone) {
+          this.nome = nome
+          this.telefone = telefone
+      }
+  }
+
+  class Agenda {
+      constructor() {
+          this.listaPessoas = []
+      }
+
+      armazenaPessoa(nome, telefone) {
+          // Checar se a lista tem espaço disponível
+          if (this.listaPessoas.length < 10) {
+              this.listaPessoas.push(new Pessoa(nome, telefone))
+          } else {
+              console.log("Agenda está lotada!")
+          }
+      }
+
+      imprimeAgenda() {
+          for (let pessoa of this.listaPessoas) {
+              console.log(`Nome: ${pessoa.nome} | Telefone: ${pessoa.telefone}`)
+          }
+      }
+
+      removePessoa(nome) {
+          for (let i = 0, tamanhoVetor = this.listaPessoas.length; i < tamanhoVetor; i++) {
+              if (this.listaPessoas[i].nome === nome) {
+                  this.listaPessoas.splice(i, 1)
+                  break
+              }
+          }
+      }
+
+      imprimePessoa(indice) {
+          // Verificar se o indice é válido
+          if (indice < 0 && indice > 9) {
+              console.log("Indice Inválido!")
+          } else {
+              console.log(`Nome: ${this.listaPessoas[indice].nome} | Telefone: ${this.listaPessoas[indice].telefone}`)
+          }
+      }
+
+      buscaPessoa(nome) {
+          for (let pessoa of this.listaPessoas) {
+              if (pessoa.nome === nome) {
+                  console.log(`Telefone: ${pessoa.telefone}`)
+                  return
+              }
+          }
+          console.log("Nome não cadastrado!")
+      }
+  }
+</Script> -->
