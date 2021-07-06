@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@keyframes aparecer {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+
+body {
+    background-image: url(../img/Fundo\ Itens.jpg);   
+}
+
+header {
+    transition: all 1s; 
+    text-align: center;  
+}
+
+.header-container { 
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+}
+
+.avatar {
+    animation-name: aparecer;   
+    animation-duration: 2s;
+    margin-top: 15px;
+    border-radius: 100%;
+    width: 80px;
+}
+
+h1 {
+    animation-name: aparecer;   
+    animation-duration: 2s;
+    margin: 0%;
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    color: white; 
+    padding-bottom: 15px;
+}
+
+#itens {
+    background-image: url(../img/Background\ body.jpg);
+}
+
+#itens:hover {
+    display: block;
+}
+
+header h2 {
+    animation-name: aparecer;   
+    animation-duration: 2s;
+    margin: 0%;
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    color: white; 
+}
+
+header a {
+    animation-name: aparecer;   
+    animation-duration: 2s; 
+    width: 40px;
+    text-decoration: none;
+    color: white;
+    border-bottom: groove transparent;
+}
+
+header a:hover {
+    border-bottom: groove;
+}
+
+#itens {
+    border-radius: 15px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    margin-left: 60px;
+    margin-right: 60px;
+    text-align: center;
+}
+
+#itens a {
+    color: black;
+}
+
+#itens a:hover {
+    text-decoration: none;
+}
+
+footer {
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding-bottom: 24px;
+    color: white;
+}
+
+#redes {
+    text-align: center;
+}
+
+#redes ul {
+    padding-left: 0;
+}
+
+#redes li {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    margin-right: 35px;
+    width: 20px;  
+    height: 20px;
+    padding-top: 30px;
+}
+
+#redes i {
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.527);
+}
+
+#redes .twitter i:hover {
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    transition: all 0.5s;
+    color: #02A9ED
+}
+
+#redes .faceboock i:hover {
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    transition: all 0.5s;
+    color: #2172E9
+}
+
+#redes .instagram i:hover {
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    transition: all 0.5s;
+    background: #f09433; 
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#redes .email i:hover {
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    transition: all 0.5s;
+    color: #1D6DB1;
+}
+
+@media screen and (min-width: 600px) {  
+    .avatar {
+        height: 120px;
+        width: auto;
+    }
+    
+    h1 {
+        font-size: 60px;
+    }
+    
+    #redes i {
+        font-size: 40px;
+    }
+
+    #redes li {
+        margin-right: 70px;
+        padding-top: 30px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    header {
+        text-align: start;
+    }
+
+    .header-container {
+        display: grid;
+        grid-template-areas: 
+            "img link link link"
+            "img titulo titulo titulo"
+            "img h2 h2 h2";
+        align-items: cen;
+    }
+
+    .header-container .avatar {
+        grid-area: img;
+    }
+
+    .header-container h1 {
+        grid-area: titulo;
+    }
+
+    .header-container a {
+        grid-area: link;
+    }
+
+    .header-container h2 {
+        grid-area: h2;
+
+    }
+    
+    .avatar {
+        height: 180px;
+        width: auto;
+        margin: 15px;
+    }
+
+    header h1 {
+        margin-right: 220px;
+        text-align: center;
+        font-size: 70px;
+    }
+
+    header h2 {
+        margin-right: 220px;
+        text-align: center;
+        font-size: 50px;
+    }
+
+    #redes i {
+        font-size: 50px;
+    }
+
+    #redes li {
+        margin-right: 100px;
+        padding-top: 30px;
+    }
+
+    #redes .twitter i:hover {
+        font-size: 51px;
+        -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+        filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+        transition: all 0.5s;
+        color: #02A9ED
+    }
+}

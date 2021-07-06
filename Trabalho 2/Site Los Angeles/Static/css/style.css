@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@keyframes aparecer {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
 
 
 body {
@@ -6,10 +14,11 @@ body {
 }
 
 header {
+    transition: all 1s; 
     background-image: url(../img/Background\ header.jpg);
     background-position: center;
     background-size: cover;
-    text-align: center;
+    text-align: center;  
 }
 
 .header-container { 
@@ -19,6 +28,8 @@ header {
 }
 
 .avatar {
+    animation-name: aparecer;   
+    animation-duration: 2s;
     margin-top: 15px;
     border-radius: 100%;
     width: 80px;
@@ -29,23 +40,30 @@ ul {
 }
 
 h1 {
+    animation-name: aparecer;   
+    animation-duration: 2s;
     margin: 0%;
     font-family: 'Dancing Script', cursive;
     font-size: 50px;
-}
-
-header h1 {
-    color: white;
+    color: white; 
     padding-bottom: 15px;
 }
 
+header h2 {
+    color: blanchedalmond;
+}
+
 header a {
+    animation-name: aparecer;   
+    animation-duration: 2s; 
+    width: 40px;
     text-decoration: none;
     color: white;
+    border-bottom: groove transparent;
 }
 
 header a:hover {
-    color: black;
+    border-bottom: groove;
 }
 
 nav {
@@ -77,7 +95,7 @@ nav a {
     color: black;
     border: 1px transparent;
     border-radius: 10px;
-    padding: 10px;
+    padding: 7px;
 }
 
 nav a::before {
@@ -93,29 +111,36 @@ nav ul {
     padding-bottom: 15px;
 }
 
-.fotos {
-    margin-top: 40px;
-    text-align: center;
+body, html {
+    height: 100%;
+  }
+
+#fotos {
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+.foto1 {
+    background-image: url("../img/475457-Los-Angeles.webp");
+
 }
 
-
-.fotos img:hover {
-    transform: scale(1.05);
-    transition: all 0.5;
-    -webkit-filter: brightness(50%);
-    filter: brightness(50%);
+.foto2 {
+    background-image: url("../img/Wiki_training_0226.jpg");
 }
 
-.fotos img {
-    border: 2px solid transparent;
-    transition: 1s;
-    border-radius: 20%;
-    height: 259px;
-    width: 195px;
+.foto3 {
+    background-image: url("../img/1923-show-de-luzes-e-aguas-marco-tres-frontei.jpg");
 }
 
-.fotos h2 {
-    margin-bottom: 90px;
+#conteudo {
+    font-size: larger;
+    text-align: justify;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 footer {
@@ -132,7 +157,7 @@ footer {
 }
 
 #redes ul {
-    padding-left: 0;
+    padding: 0;
 }
 
 #redes li {
@@ -150,19 +175,35 @@ footer {
 }
 
 #redes .twitter i:hover {
-    color: #1DA1F2
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    transition: all 0.5s;
+    color: #02A9ED
 }
 
 #redes .faceboock i:hover {
-    color: #4064AC
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    transition: all 0.5s;
+    color: #2172E9
 }
 
 #redes .instagram i:hover {
-    color: red; 	background: -webkit-linear-gradient(45deg, #f7ce02, #f96302, #f71102, #d32155, #b43890, #904eca, #8944bb, #7832ae); 	-webkit-background-clip: text; 	-webkit-text-fill-color: transparent;
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    transition: all 0.5s;
+    background: #f09433; 
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #redes .email i:hover {
-    color: #0071CE
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    transition: all 0.5s;
+    color: #1D6DB1;
 }
 
 @media screen and (min-width: 600px) {  
@@ -178,11 +219,8 @@ footer {
     nav a {
         font-size: 17px;
     }
-    
-    .fotos img {
-        height: 359px;
-        width: 295px;
-    }
+
+        
 
     #redes i {
         font-size: 40px;
@@ -203,7 +241,8 @@ footer {
         display: grid;
         grid-template-areas: 
             "img link link link"
-            "img titulo titulo titulo";
+            "img titulo titulo titulo"
+            "img h2 h2 h2";
         align-items: center;
     }
 
@@ -217,6 +256,11 @@ footer {
 
     .header-container a {
         grid-area: link;
+    }
+
+    .header-container h2 {
+        grid-area: h2;
+
     }
     
     .avatar {
@@ -270,63 +314,36 @@ footer {
         margin-right: 10px;
     }
 
-        
-    .fotos .fotos-viagens {
-        border-radius: 20%;
-        height: 259px;
-        width: 195px;
-
-    }
-    
-    .fotos h2 {
-        margin-bottom: 90px;
-        font-size: 30px;
-    }
-
-    .fotos-viagens {
+    #geral {
         display: grid;
         grid-template-areas: 
-        "foto1 foto2"
-        "texto1 texto2";
+        "foto1 texto1 texto1" 
+        "texto2 texto2 foto2"
+        "foto3 texto3 texto3";
     }
 
-    .fotos-viagens .brasilia {
+    #fotos .foto1 {
         grid-area: foto1;
     }
 
-    .fotos-viagens .foz-do-iguaçul {
+    #fotos .foto2 {
         grid-area: foto2;
     }
 
-    .fotos-viagens .brasilia-texto {
-        grid-area: texto1;
-    }
-
-    .fotos-lugares {
-        display: grid;
-        grid-template-areas: 
-        "foto1 foto2 foto3" 
-        "texto1 texto2 texto3";
-    }
-
-    .fotos-lugares .pyongyang {
-        grid-area: foto1;
-    }
-
-    .fotos-lugares .chernobyl {
-        grid-area: foto2;
-    }
-
-    .fotos-lugares .los-angeles {
+    #fotos .foto3 {
         grid-area: foto3;
     }
 
-    .fotos-lugares .pyongyang-texto {
+    #conteudo .texto1 {
         grid-area: texto1;
     }
 
-    .fotos-lugares .chernobyl-texto {
+    #conteudo .texto2 {
         grid-area: texto2;
+    }
+
+    #conteudo .texto3 {
+        grid-area: texto3;
     }
 
     #redes i {
@@ -336,5 +353,13 @@ footer {
     #redes li {
         margin-right: 100px;
         padding-top: 30px;
+    }
+
+    #redes .twitter i:hover {
+        font-size: 51px;
+        -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+        filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+        transition: all 0.5s;
+        color: #02A9ED
     }
 }
