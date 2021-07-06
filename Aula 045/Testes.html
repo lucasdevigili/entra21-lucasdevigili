@@ -6,29 +6,57 @@
     <title>Document</title>
 </head>
 <body>
-<!-- 1) Crie uma classe Ponto2D para representar um ponto no espaço cartesiano. Essa classe
-deve ter os atributos: x e y.
-Essa classe deve ter o método estático temEixoComum(pontoA, pontoB) que retorna true
-se as duas classes tiverem as mesmas coordenadas para algum dos eixos.
-Exemplo:
-(1, 2) e (1, -17) -> True
-(13, -8) e (8, -22) -> False -->
-    <script>
-        class Ponto2D {
-            constructor(x, y) {
-                this.x = x
-                this.y = y
+<!--  3) Nesse problema temos dois hamster: Hamtaro e Fofuxo. Os dois herdam do objeto hamster.
+        Quando alimentamos um deles, o outro também fica cheio. Por que? Como consertar isso?
+ -->
+ <script>
+     class Relogio {
+            constructor(formato) {
+                this.formato = formato
             }
-            
-            static temEixoComum(pontoA, pontoB) {
-                return pontoA.x === pontoB.x || pontoA.y === pontoB.y
-            }            
-        }
 
-        let pontoA = new Ponto2D(10, 9),
-            pontoB = new Ponto2D(8, 9)
-        
-        console.log(Ponto2D.temEixoComum(pontoA, pontoB))
-    </script>
+            renderizar() {
+                let data = new Date()
+
+                let horas = data.getHours()
+                if (horas < 10) horas = "0" + horas
+
+                let minutos = data.getMinutes()
+                if (minutos < 10) minutos = "0" + minutos
+
+                let segundos = data.getSeconds()
+                if (segundos < 10) segundos = "0" + segundos
+
+                let resultado = this.formato
+                    .replace("h", horas)
+                    .replace("m", minutos)
+                    .replace("s", segundos)
+                
+                console.log(resultado)
+            }
+
+            parar() {
+                clearInterval(this.timer)
+            }
+
+            comecar() {
+                this.renderizar()
+                this.timer = setInterval(() => this.renderizar(), 1000)
+            }
+        }
+        class Milissegundo extends Relogio{
+            constructor(formato, milissegundo) {
+                super(formato)
+                this.milissegundo = milissegundo
+            }
+
+            comecar() {
+                super.renderizar()
+                this.timer = setInterval(() => super.renderizar(), this.milissegundo)
+            }
+        }
+        //let timer1 = new Relogio("h:m:s")
+        //timer1.comecar()
+ </script>
 </body>
 </html>
