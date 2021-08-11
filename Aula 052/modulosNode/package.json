@@ -1,0 +1,12 @@
+{
+  "name": "modulosNode",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Como usar os modulos ES6 no node",
+  "main": "circulo.js",
+  "scripts": {
+  }, 
+  "keywords": ["oi"],
+  "author": "Lucas Devigili",
+  "license": "ISC"
+}

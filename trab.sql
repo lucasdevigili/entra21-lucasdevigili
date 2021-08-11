@@ -1,0 +1,33 @@
+CREATE TABLE IF NOT EXISTS imovel (
+	id SERIAL PRIMARY KEY,
+	numero_quartos INTEGER NOT NULL,
+	numero_banheiro INTEGER NOT NULL,
+	area INTEGER NOT NULL,
+	piscina BOOLEAN NOT NULL,
+	churrasqueira BOOLEAN NOT NULL,
+);
+
+CREATE TABLE IF NOT EXISTS proprietario (
+	id SERIAL PRIMARY KEY,
+	telefone INTEGER NOT NULL,
+	nome TEXT NOT NULL,
+	cpf INTEGER NOT NULL, 
+	endereco TEXT NOT NULL,
+); 
+
+CREATE TABLE IF NOT EXISTS contrato (
+	id SERIAL PRIMARY KEY,
+	data_inicio INTEGER NOT NULL,
+	data_termino INTEGER NOT NULL, 
+	valor INTEGER NOT NULL,
+	data_vencimento INTEGER NOT NULL,
+	observações TEXT NOT NULL,
+);
+
+CREATE TABLE IF NOT EXISTS locatario (
+	id SERIAL PRIMARY KEY;
+	nome TEXT NOT NULL;
+	cpf INTEGER NOT NULL;
+	telefone INTEGER NOT NULL;
+	endereco TEXT NOT NULL;
+);
