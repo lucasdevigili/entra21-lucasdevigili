@@ -91,7 +91,7 @@ nav a {
     color: black;
     border: 1px transparent;
     border-radius: 10px;
-    padding: 7px;
+    padding: 10px;
 }
 
 nav a::before {
@@ -112,14 +112,12 @@ nav ul {
     text-align: center;
 }
 
-.fotos img:hover {
-    -moz-transform: scale(1.05);
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-    transition: all 0.5s;
-    -webkit-filter: brightness(50%);
-    filter:  brightness(50%);
 
+.fotos img:hover {
+    transform: scale(1.05);
+    transition: all 0.5;
+    -webkit-filter: brightness(50%);
+    filter: brightness(50%);
 }
 
 .fotos img {
@@ -166,35 +164,19 @@ footer {
 }
 
 #redes .twitter i:hover {
-    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
-    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
-    transition: all 0.5s;
-    color: #02A9ED
+    color: #1DA1F2
 }
 
 #redes .faceboock i:hover {
-    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
-    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
-    transition: all 0.5s;
-    color: #2172E9
+    color: #4064AC
 }
 
 #redes .instagram i:hover {
-    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
-    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
-    transition: all 0.5s;
-    background: #f09433; 
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
+    color: red; 	background: -webkit-linear-gradient(45deg, #f7ce02, #f96302, #f71102, #d32155, #b43890, #904eca, #8944bb, #7832ae); 	-webkit-background-clip: text; 	-webkit-text-fill-color: transparent;
 }
 
 #redes .email i:hover {
-    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
-    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
-    transition: all 0.5s;
-    color: #1D6DB1;
+    color: #0071CE
 }
 
 @media screen and (min-width: 600px) {  
@@ -367,13 +349,5 @@ footer {
     #redes li {
         margin-right: 100px;
         padding-top: 30px;
-    }
-
-    #redes .twitter i:hover {
-        font-size: 51px;
-        -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
-        filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
-        transition: all 0.5s;
-        color: #02A9ED
     }
 }

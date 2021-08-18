@@ -1,0 +1,263 @@
+1) Crie uma classe Ponto2D para representar um ponto no espaço cartesiano. Essa classe
+deve ter os atributos: x e y.
+Essa classe deve ter o método estático temEixoComum(pontoA, pontoB) que retorna true
+se as duas classes tiverem as mesmas coordenadas para algum dos eixos.
+Exemplo:
+(1, 2) e (1, -17) -> True
+(13, -8) e (8, -22) -> False
+
+<!--<script>
+        class Ponto2D {
+            constructor(x, y) {
+                this.x = x
+                this.y = y
+            }
+            
+            static temEixoComum(pontoA, pontoB) {
+                return pontoA.x === pontoB.x || pontoA.y === pontoB.y
+            }            
+        }
+
+        let pontoA = new Ponto2D(10, 9),
+            pontoB = new Ponto2D(8, 9)
+        
+        console.log(Ponto2D.temEixoComum(pontoA, pontoB))
+    </script>-->
+
+2) Crie uma classe Calc que implemente os seguintes métodos estáticos:
+- soma(n1, n2): Retorna a soma de n1+n2
+- subtracao(n1, n2): Retorna a subtração de n1-n2
+- multiplicacao(n1, n2): Retorna a multiplicação de n1*n2
+- divisao(n1, n2): Retorna a divisão de n1/n2
+Testes:
+Calc.soma(1, 2) // 3
+Calc.subtracao(2, 3) // -1
+Calc.multiplicacao(5, 2) // 10
+Calc.divisao(3, 3) // 1
+
+<!-- <script>
+    class Clac {            
+        static soma(n1, n2) {
+            return n1 + n2
+        }
+        static subtracao(n1, n2) {
+            return n1 - n2
+        }
+        static multiplicacao(n1, n2) {
+            return n1 * n2
+        }
+        static divisao(n1, n2) {
+            return n1 / n2
+        }
+    }
+    
+    let n1 = Math.floor(Math.random() * 10),
+        n2 = Math.floor(Math.random() * 10)
+    
+    console.log(n1, n2),
+    console.log(Clac.soma(n1, n2)),
+    console.log(Clac.subtracao(n1, n2)),
+    console.log(Clac.multiplicacao(n1, n2)),
+    console.log(Clac.divisao(n1, n2))
+</script> -->
+
+1) Analise o código abaixo e informe quais valores serão apresentados no processo
+
+    <!-- let animal = {
+        pula: null
+    }
+
+    let coelho = {
+        __proto__: animal,
+        pula: true
+    }
+
+    console.log(coelho.pula) True
+
+    delete coelho.pula
+
+    console.log(coelho.pula) null
+
+    delete animal.pula
+
+    console.log(coelho.pula) undefined -->
+
+2) Dado os seguintes objetos:
+let cabeca = {
+    oculos: 1
+}
+let mesa = {
+    caneta: 3
+}
+let cama = {
+    lenco: 1,
+    travesseiro: 2
+}
+let bolso = {
+    dinheiro: 200
+}
+- Use __proto__ para atribuir prototypes na seguinte ordem: bolso -> cama -> mesa -> cabeca.
+Testes:
+console.log(bolso.caneta) // 3
+console.log(cama.oculos) // 1
+console.log(mesa.dinheiro) // undefined
+
+<!-- <script>
+    let cabeca = {
+        oculos: 1
+    }
+
+    let mesa = {
+        caneta: 3
+    }
+
+    let cama = {
+        lenco: 1,
+        travesseiro: 2
+    }
+
+    let bolso = {
+        dinheiro: 200
+    }
+
+    mesa.__proto__ = cabeca
+    cama.__proto__ = mesa
+    bolso.__proto__ = cama
+
+    console.log(bolso.caneta) 
+    console.log(cama.oculos) 
+    console.log(mesa.dinheiro)
+</script> -->
+
+3) Nesse problema temos dois hamster: Hamtaro e Fofuxo. Os dois herdam do objeto hamster.
+Quando alimentamos um deles, o outro também fica cheio. Por que? Como consertar isso?
+let hamster = {
+    estomago = [],
+
+    comer(comida) {
+        this.estomago.push(comida)
+    }
+}
+
+let hamtaro = {
+    __proto__ = hamster
+}
+
+let fofuxo = {
+    __proto__ = hamster
+}
+
+hamtaro.comer("Maçã")
+console.log(hamtaro.estomago) // Maçã
+
+console.log(fofuxo.estomago) // Maçã
+*/
+
+<!-- <script>
+    let hamster = {
+    comer(comida) {
+        this.estomago.push(comida)                                                             
+    }
+}
+
+let hamtaro = {
+    estomago : [],
+    __proto__ : hamster,
+
+  
+}
+
+let fofuxo = {
+    estomago : [],
+    __proto__ : hamster,
+}
+</script> -->
+
+1) Corrija o script a seguir para que ele funcione
+class Animal {
+    constructor(nome) {
+        this.nome = nome
+    }            
+}
+
+class Coelho extends Animal {
+    constructor(nome) {
+        this.nome = nome
+        this.criadoEm = Date.now()
+    }
+}
+
+let coelho = new Coelho("Coelho Branco")
+alert(coelho.nome)
+
+<!-- <script>
+        class Animal {
+    constructor(nome) {
+        this.nome = nome
+    }            
+    }
+
+    class Coelho extends Animal {
+    constructor(nome) {
+        super()
+        this.nome = nome
+        this.criadoEm = Date.now()
+    }
+    }
+
+    let coelho = new Coelho("Coelho Branco")
+    alert(coelho.nome)
+</script> -->
+
+2) Crie uma subclasse de Relogio que adiciona o parametro de precisao 
+        (O numero em ms entre os ticks). 
+
+<!-- <script>
+    class Relogio {
+           constructor(formato) {
+               this.formato = formato
+           }
+
+           renderizar() {
+               let data = new Date()
+
+               let horas = data.getHours()
+               if (horas < 10) horas = "0" + horas
+
+               let minutos = data.getMinutes()
+               if (minutos < 10) minutos = "0" + minutos
+
+               let segundos = data.getSeconds()
+               if (segundos < 10) segundos = "0" + segundos
+
+               let resultado = this.formato
+                   .replace("h", horas)
+                   .replace("m", minutos)
+                   .replace("s", segundos)
+               
+               console.log(resultado)
+           }
+
+           parar() {
+               clearInterval(this.timer)
+           }
+
+           comecar() {
+               this.renderizar()
+               this.timer = setInterval(() => this.renderizar(), 1000)
+           }
+       }
+       class Milissegundo extends Relogio{
+           constructor(formato, milissegundo) {
+               super(formato)
+               this.milissegundo = milissegundo
+           }
+
+           comecar() {
+               super.renderizar()
+               this.timer = setInterval(() => super.renderizar(), this.milissegundo)
+           }
+       }
+       //let timer1 = new Relogio("h:m:s")
+       //timer1.comecar()
+</script> -->
