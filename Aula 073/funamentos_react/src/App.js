@@ -31,7 +31,7 @@ function App() {
             <MembroFamilia nome="José" />
           </Familia>
         </Card>
-        <Card titulo="Renderizaçãoi de condicional">
+        <Card titulo="Renderização de condicional">
           <ParOuImpar numero={10} />
           <ParOuImpar numero={5} />
           <hr/>
