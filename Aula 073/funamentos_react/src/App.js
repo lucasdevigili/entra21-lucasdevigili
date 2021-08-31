@@ -17,13 +17,19 @@ function App() {
         <Card titulo="Primeiro componente" cor="#F24464">
           <PrimeiroComponente />
         </Card>
+
+
         <Card titulo="Componente com props">
           <ComProps mensagem="Estou sendo enviado pelas props" />
           <ComProps mensagem="Outra mensagem..." />
         </Card>
+
+
         <Card titulo="Lista de alunos" cor="#424255">
           <ListaAlunos />
         </Card>
+
+
         <Card titulo="Children" cor="#37A6A6">
           <Familia sobrenome="da Silva">
             <MembroFamilia nome="Ana" />
@@ -31,11 +37,13 @@ function App() {
             <MembroFamilia nome="José" />
           </Familia>
         </Card>
+        
+
         <Card titulo="Renderização de condicional">
           <ParOuImpar numero={10} />
           <ParOuImpar numero={5} />
-          <hr/>
-          <Notificacao mensagens={["oi", "tchau"]}/>
+          <hr />
+          <Notificacao mensagens={["oi", "tchau"]} />
         </Card>
       </div>
     </div>
